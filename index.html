@@ -39,19 +39,21 @@
     }
 
     ul.checklist li {
-      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
       padding: 10px 0;
+      border-bottom: 1px solid #eee;
     }
 
     ul.checklist li:last-child {
       border-bottom: none;
     }
 
-    label.check-label {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      cursor: pointer;
+    .check-label {
+      flex: 1;
+      margin-left: 10px;
+      transition: color 0.3s, text-decoration 0.3s;
+      display: inline-block;
     }
 
     input[type="checkbox"] {
@@ -59,7 +61,7 @@
       margin-top: 4px;
     }
 
-    .checked label.check-label {
+    .checked .check-label {
       text-decoration: line-through;
       color: #888;
     }
@@ -85,21 +87,21 @@
   <div class="container">
     <h2>Boiler Service Checklist</h2>
     <ul class="checklist">
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Check Manufacturer's Instructions for service requirements and relevant boiler readings</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Visually Inspect Boiler, Flue and Gas System</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Check Fuse</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Perform Electrical Safe To Touch Test and Safe Isolation To TB118a (Prove, Test, Prove)</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Perform Relevant Boiler Service Procedure As Per Manufacturer's Instructions</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Visually Inspect Inside Of Boiler (Cable Grommets, Room Seal, Burner Insulation etc.)</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Perform Combustion Analysis Comparing To Manufacturer's Instructions (Case On)</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Perform Gas Rate And Compare To Manufacturer's Instructions</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Test FFD</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Perform Full Tightness Test Procedure (While Boiler In Lockout State)</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Spray Test Nipple And ECV Barrel</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Test Alarms And Check Expiry Dates</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Ensure Boiler Has Been Reassembled Correctly, Flue Sample Point Has Been Replaced And That Appliance Is Left In Working Order</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Inspect Gas Meter Test Nipple Final Time To Ensure No Leaks Are Left</label></li>
-      <li><label class="check-label"><input type="checkbox" onchange="toggleCheck(this)">Collect Tenants Contact Details</label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Check Manufacturer's Instructions for service requirements and relevant boiler readings</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Visually Inspect Boiler, Flue and Gas System</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Check Fuse</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Perform Electrical Safe To Touch Test and Safe Isolation To TB118a (Prove, Test, Prove)</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Perform Relevant Boiler Service Procedure As Per Manufacturer's Instructions</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Visually Inspect Inside Of Boiler (Cable Grommets, Room Seal, Burner Insulation etc.)</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Perform Combustion Analysis Comparing To Manufacturer's Instructions (Case On)</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Perform Gas Rate And Compare To Manufacturer's Instructions</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Test FFD</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Perform Full Tightness Test Procedure (While Boiler In Lockout State)</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Spray Test Nipple And ECV Barrel</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Test Alarms And Check Expiry Dates</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Ensure Boiler Has Been Reassembled Correctly, Flue Sample Point Has Been Replaced And That Appliance Is Left In Working Order</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Inspect Gas Meter Test Nipple Final Time To Ensure No Leaks Are Left</span></label></li>
+      <li><label><input type="checkbox" onchange="toggleCheck(this)"><span class="check-label">Collect Tenants Contact Details</span></label></li>
     </ul>
     <button class="reset-btn" onclick="resetChecklist()">Reset</button>
   </div>
